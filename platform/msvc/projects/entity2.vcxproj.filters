@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="component">
+      <UniqueIdentifier>{e8cb6a74-596d-42c4-af23-5e26ed8d70ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system">
+      <UniqueIdentifier>{97b4390d-77c4-49a5-9ada-cabb7643d8d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="component\geo">
+      <UniqueIdentifier>{98652e03-66c0-4b23-9d55-73e9a6fd8c7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entity">
+      <UniqueIdentifier>{bb4ef3ef-c140-46f7-a49d-9ab079cfa5dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="component\asset">
+      <UniqueIdentifier>{a650b4d4-30a4-4312-ab88-8b8f2b4a949e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\entity2\CompLocalMat.h">
+      <Filter>component\geo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompPosition.h">
+      <Filter>component\geo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompAngle.h">
+      <Filter>component\geo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompScale.h">
+      <Filter>component\geo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompImage.h">
+      <Filter>component\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompBoundingBox.h">
+      <Filter>component\geo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\SysTranslate.cpp">
+      <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\CompImage.cpp">
+      <Filter>component\asset</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
