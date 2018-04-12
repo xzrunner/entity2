@@ -11,16 +11,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\entity2\CompAngle.h" />
     <ClInclude Include="..\..\..\include\entity2\CompBoundingBox.h" />
     <ClInclude Include="..\..\..\include\entity2\CompImage.h" />
-    <ClInclude Include="..\..\..\include\entity2\CompLocalMat.h" />
-    <ClInclude Include="..\..\..\include\entity2\CompPosition.h" />
-    <ClInclude Include="..\..\..\include\entity2\CompScale.h" />
+    <ClInclude Include="..\..\..\include\entity2\CompTransform.h" />
+    <ClInclude Include="..\..\..\include\entity2\SysTransform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\CompImage.cpp" />
-    <ClCompile Include="..\..\..\source\SysTranslate.cpp" />
+    <ClCompile Include="..\..\..\source\SysTransform.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\include\entity2\SysTransform.inl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectName>3.entity2</ProjectName>
@@ -65,7 +66,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\guard\include;..\..\..\..\ecsx\include;..\..\..\..\painting2\include;..\..\..\..\external\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\memmgr\include;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\ecsx\include;..\..\..\..\painting2\include;..\..\..\..\external\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;__STDC_LIMIT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -79,7 +80,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\guard\include;..\..\..\..\ecsx\include;..\..\..\..\painting2\include;..\..\..\..\external\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\memmgr\include;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\ecsx\include;..\..\..\..\painting2\include;..\..\..\..\external\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;__STDC_LIMIT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>

@@ -16,33 +16,35 @@
     <Filter Include="component\asset">
       <UniqueIdentifier>{a650b4d4-30a4-4312-ab88-8b8f2b4a949e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="system\geo">
+      <UniqueIdentifier>{ff924acb-cb2b-44d2-a919-48ff3004d7e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\entity2\CompLocalMat.h">
-      <Filter>component\geo</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\entity2\CompPosition.h">
-      <Filter>component\geo</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\entity2\CompAngle.h">
-      <Filter>component\geo</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\entity2\CompScale.h">
-      <Filter>component\geo</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\include\entity2\CompImage.h">
       <Filter>component\asset</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\include\entity2\CompBoundingBox.h">
       <Filter>component\geo</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompTransform.h">
+      <Filter>component\geo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\SysTransform.h">
+      <Filter>system\geo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\SysTranslate.cpp">
-      <Filter>system</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\source\CompImage.cpp">
       <Filter>component\asset</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\SysTransform.cpp">
+      <Filter>system\geo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\include\entity2\SysTransform.inl">
+      <Filter>system\geo</Filter>
+    </None>
   </ItemGroup>
 </Project>
