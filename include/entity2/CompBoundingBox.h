@@ -1,14 +1,19 @@
 #pragma once
 
 #include <ecsx/Component.h>
-#include <painting2/AABB.h>
+#include <SM_Rect.h>
+#include <SM_Vector.h>
 
 namespace e2
 {
 
 struct CompBoundingBox : public ecsx::Component
 {
-	pt2::AABB aabb;
+	CompBoundingBox() : angle(0) {}
+
+	sm::rect rect;
+	sm::vec2 position;
+	float    angle;
 
 }; // CompBoundingBox
 
