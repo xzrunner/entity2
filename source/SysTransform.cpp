@@ -34,6 +34,23 @@ void SysTransform::Translate(ecsx::World& world,
 	}
 }
 
+void SysTransform::Translate(ecsx::World& world, const ecsx::Entity& entity, const sm::vec2& offset)
+{
+	// pos
+	if (world.HasComponent<CompPosition>(entity)) {
+		auto& cpos = world.GetComponent<CompPosition>(entity);
+		cpos.pos += offset;
+	} else {
+		world.AddComponent<CompPosition>(entity, offset);
+	}
+	// mat
+	auto& cmat = world.GetComponent<CompLocalMat>(entity);
+	cmat.mat.Translate(offset.x, offset.y);
+	// bb
+	auto& cbb = world.GetComponent<CompBoundingBox>(entity);
+	cbb.position += offset;
+}
+
 void SysTransform::Rotate(ecsx::World& world, const ecsx::Entity& entity, float rot)
 {
 	// angle
@@ -49,6 +66,54 @@ void SysTransform::Rotate(ecsx::World& world, const ecsx::Entity& entity, float 
 	// bb
 	auto& cbb = world.GetComponent<CompBoundingBox>(entity);
 	cbb.angle += rot;
+}
+
+void SysTransform::SetPosition(ecsx::World& world, 
+	                           const ecsx::Entity& entity, 
+	                           const sm::vec2& pos)
+{
+	if (world.HasComponent<CompPosition>(entity)) {
+		auto& cpos = world.GetComponent<CompPosition>(entity);
+		cpos.pos = pos;
+	} else {
+		world.AddComponent<CompPosition>(entity, pos);
+	}
+}
+
+void SysTransform::SetAngle(ecsx::World& world, 
+	                        const ecsx::Entity& entity, 
+	                        float angle)
+{
+	if (world.HasComponent<CompAngle>(entity)) {
+		auto& cangle = world.GetComponent<CompAngle>(entity);
+		cangle.angle = angle;
+	} else {
+		world.AddComponent<CompAngle>(entity, angle);
+	}
+}
+
+void SysTransform::SetScale(ecsx::World& world, 
+	                        const ecsx::Entity& entity, 
+	                        const sm::vec2& scale)
+{
+	if (world.HasComponent<CompScale>(entity)) {
+		auto& coffset = world.GetComponent<CompScale>(entity);
+		coffset.scale = scale;
+	} else {
+		world.AddComponent<CompScale>(entity, scale);
+	}
+}
+
+void SysTransform::SetShear(ecsx::World& world, 
+	                        const ecsx::Entity& entity,
+	                        const sm::vec2& shear)
+{
+	if (world.HasComponent<CompShear>(entity)) {
+		auto& cshear = world.GetComponent<CompShear>(entity);
+		cshear.shear = shear;
+	} else {
+		world.AddComponent<CompShear>(entity, shear);
+	}
 }
 
 void SysTransform::SetOffset(ecsx::World& world, 

@@ -16,11 +16,14 @@ public:
 		const std::vector<ecsx::Entity>& entities,
 		const sm::vec2& offset);
 
-	static void Rotate(ecsx::World& world, const ecsx::Entity& entity,
-		float rot);
+	static void Translate(ecsx::World& world, const ecsx::Entity& entity, const sm::vec2& offset);
+	static void Rotate(ecsx::World& world, const ecsx::Entity& entity, float rot);
 
-	static void SetOffset(ecsx::World& world, const ecsx::Entity& entity,
-		const sm::vec2& offset);
+	static void SetPosition(ecsx::World& world, const ecsx::Entity& entity, const sm::vec2& pos);
+	static void SetAngle(ecsx::World& world, const ecsx::Entity& entity, float angle);
+	static void SetScale(ecsx::World& world, const ecsx::Entity& entity, const sm::vec2& scale);
+	static void SetShear(ecsx::World& world, const ecsx::Entity& entity, const sm::vec2& shear);
+	static void SetOffset(ecsx::World& world, const ecsx::Entity& entity, const sm::vec2& offset);
 
 	static sm::vec2 GetPosition(const ecsx::World& world, const ecsx::Entity& entity);
 	static float    GetAngle(const ecsx::World& world, const ecsx::Entity& entity);
@@ -28,12 +31,10 @@ public:
 	static sm::vec2 GetShear(const ecsx::World& world, const ecsx::Entity& entity);
 	static sm::vec2 GetOffset(const ecsx::World& world, const ecsx::Entity& entity);
 
-	static sm::vec2 CalcCenter(const ecsx::World& world, 
-		const ecsx::Entity& entity);
+	static sm::vec2 CalcCenter(const ecsx::World& world, const ecsx::Entity& entity);
 
 private:
-	static void UpdateLocalMat(const ecsx::World& world,
-		const ecsx::Entity& entity);
+	static void UpdateLocalMat(const ecsx::World& world, const ecsx::Entity& entity);
 
 }; // SysTransform
 

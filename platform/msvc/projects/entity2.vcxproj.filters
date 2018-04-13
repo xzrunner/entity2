@@ -33,6 +33,9 @@
     <ClInclude Include="..\..\..\include\entity2\SysTransform.h">
       <Filter>system\geo</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\SysRender.h">
+      <Filter>system</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\CompImage.cpp">
@@ -40,6 +43,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\SysTransform.cpp">
       <Filter>system\geo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\CompBoundingBox.cpp">
+      <Filter>component\geo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\SysRender.cpp">
+      <Filter>system</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -14,10 +14,13 @@
     <ClInclude Include="..\..\..\include\entity2\CompBoundingBox.h" />
     <ClInclude Include="..\..\..\include\entity2\CompImage.h" />
     <ClInclude Include="..\..\..\include\entity2\CompTransform.h" />
+    <ClInclude Include="..\..\..\include\entity2\SysRender.h" />
     <ClInclude Include="..\..\..\include\entity2\SysTransform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\source\CompBoundingBox.cpp" />
     <ClCompile Include="..\..\..\source\CompImage.cpp" />
+    <ClCompile Include="..\..\..\source\SysRender.cpp" />
     <ClCompile Include="..\..\..\source\SysTransform.cpp" />
   </ItemGroup>
   <ItemGroup>
