@@ -11,6 +11,7 @@ namespace e2
 struct CompBoundingBox : public ecsx::Component
 {
 	CompBoundingBox() : angle(0) {}
+	CompBoundingBox(const sm::rect& rect) : angle(0), rect(rect) {}
 
 	void GetBoundPos(CU_VEC<sm::vec2>& bound) const;
 

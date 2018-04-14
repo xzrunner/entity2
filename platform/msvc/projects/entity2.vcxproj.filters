@@ -19,6 +19,15 @@
     <Filter Include="system\geo">
       <UniqueIdentifier>{ff924acb-cb2b-44d2-a919-48ff3004d7e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="component\color">
+      <UniqueIdentifier>{74ccb58a-f50b-454a-bfd8-f0f44ebd5dbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="component\render">
+      <UniqueIdentifier>{fe7e2e76-dfac-4db3-8d26-f50f529e1810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="component\script">
+      <UniqueIdentifier>{aaeb094f-afda-4564-b8ec-d8d75b3bfbbf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\entity2\CompImage.h">
@@ -36,11 +45,38 @@
     <ClInclude Include="..\..\..\include\entity2\SysRender.h">
       <Filter>system</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompMask.h">
+      <Filter>component\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompMesh.h">
+      <Filter>component\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompScale9.h">
+      <Filter>component\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompText.h">
+      <Filter>component\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompColorCommon.h">
+      <Filter>component\color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompColorMap.h">
+      <Filter>component\color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompScissor.h">
+      <Filter>component\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompScript.h">
+      <Filter>component\script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\CompComplex.h">
+      <Filter>component\asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\entity2\SysBoundingBox.h">
+      <Filter>system\geo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\CompImage.cpp">
-      <Filter>component\asset</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\source\SysTransform.cpp">
       <Filter>system\geo</Filter>
     </ClCompile>
@@ -49,6 +85,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\SysRender.cpp">
       <Filter>system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\CompScale9.cpp">
+      <Filter>component\asset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\SysBoundingBox.cpp">
+      <Filter>system\geo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

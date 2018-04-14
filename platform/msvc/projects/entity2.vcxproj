@@ -12,14 +12,25 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\entity2\CompBoundingBox.h" />
+    <ClInclude Include="..\..\..\include\entity2\CompColorCommon.h" />
+    <ClInclude Include="..\..\..\include\entity2\CompColorMap.h" />
+    <ClInclude Include="..\..\..\include\entity2\CompComplex.h" />
     <ClInclude Include="..\..\..\include\entity2\CompImage.h" />
+    <ClInclude Include="..\..\..\include\entity2\CompMask.h" />
+    <ClInclude Include="..\..\..\include\entity2\CompMesh.h" />
+    <ClInclude Include="..\..\..\include\entity2\CompScale9.h" />
+    <ClInclude Include="..\..\..\include\entity2\CompScissor.h" />
+    <ClInclude Include="..\..\..\include\entity2\CompScript.h" />
+    <ClInclude Include="..\..\..\include\entity2\CompText.h" />
     <ClInclude Include="..\..\..\include\entity2\CompTransform.h" />
+    <ClInclude Include="..\..\..\include\entity2\SysBoundingBox.h" />
     <ClInclude Include="..\..\..\include\entity2\SysRender.h" />
     <ClInclude Include="..\..\..\include\entity2\SysTransform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\CompBoundingBox.cpp" />
-    <ClCompile Include="..\..\..\source\CompImage.cpp" />
+    <ClCompile Include="..\..\..\source\CompScale9.cpp" />
+    <ClCompile Include="..\..\..\source\SysBoundingBox.cpp" />
     <ClCompile Include="..\..\..\source\SysRender.cpp" />
     <ClCompile Include="..\..\..\source\SysTransform.cpp" />
   </ItemGroup>
@@ -69,7 +80,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\memmgr\include;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\ecsx\include;..\..\..\..\painting2\include;..\..\..\..\external\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\memmgr\include;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\ecsx\include;..\..\..\..\painting2\include;..\..\..\..\moon\include;..\..\..\..\external\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;__STDC_LIMIT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -83,7 +94,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\memmgr\include;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\ecsx\include;..\..\..\..\painting2\include;..\..\..\..\external\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\memmgr\include;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\ecsx\include;..\..\..\..\painting2\include;..\..\..\..\moon\include;..\..\..\..\external\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;__STDC_LIMIT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
