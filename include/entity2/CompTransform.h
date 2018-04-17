@@ -9,6 +9,7 @@ namespace e2
 
 struct CompPosition : public ecsx::Component
 {
+	CompPosition() {}
 	CompPosition(const sm::vec2& pos) : pos(pos) {}
 
 	sm::vec2 pos;
@@ -17,6 +18,7 @@ struct CompPosition : public ecsx::Component
 
 struct CompAngle : public ecsx::Component
 {
+	CompAngle() : angle(0) {}
 	CompAngle(float angle) : angle(angle) {}
 
 	float angle;
@@ -25,6 +27,7 @@ struct CompAngle : public ecsx::Component
 
 struct CompScale : public ecsx::Component
 {
+	CompScale() : scale(1, 1) {}
 	CompScale(const sm::vec2& scale) : scale(scale) {}
 
 	sm::vec2 scale;
@@ -33,6 +36,7 @@ struct CompScale : public ecsx::Component
 
 struct CompShear : public ecsx::Component
 {
+	CompShear() {}
 	CompShear(const sm::vec2& shear) : shear(shear) {}
 
 	sm::vec2 shear;
@@ -41,6 +45,7 @@ struct CompShear : public ecsx::Component
 
 struct CompOffset : public ecsx::Component
 {
+	CompOffset() {}
 	CompOffset(const sm::vec2& offset) : offset(offset) {}
 
 	sm::vec2 offset;
