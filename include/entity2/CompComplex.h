@@ -10,7 +10,8 @@ namespace e2
 
 struct CompComplex : public ecsx::Component
 {
-	std::vector<ecsx::Entity> children;
+	std::shared_ptr<std::vector<ecsx::Entity>> children = 
+		std::make_unique<std::vector<ecsx::Entity>>();
 
 }; // CompComplex
 
