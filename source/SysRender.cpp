@@ -1,6 +1,7 @@
 #include "entity2/SysRender.h"
 #include "entity2/CompTransform.h"
 #include "entity2/CompImage.h"
+#include "entity2/CompComplex.h"
 
 #include <ecsx/World.h>
 #include <ecsx/Entity.h>
@@ -34,7 +35,15 @@ pt2::RenderReturn SysRender::Draw(const ecsx::World& world,
 		if (tex)
 		{
 			auto sz = tex->GetSize();
-			pt2::RenderSystem::DrawTexture(*tex, sm::rect(sz.x, sz.y), rp.mat);
+			pt2::RenderSystem::DrawTexture(*tex, sm::rect(sz.x, sz.y), rp_child.mat);
+		}
+	}
+	// complex
+	else if (world.HasComponent<CompComplex>(entity))
+	{
+		auto& ccomplex = world.GetComponent<CompComplex>(entity);
+		for (auto& child : *ccomplex.children) {
+			SysRender::Draw(world, child, rp_child);
 		}
 	}
 

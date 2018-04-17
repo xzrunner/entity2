@@ -32,6 +32,10 @@ void SysTransform::Translate(ecsx::World& world,
 		auto& cbb = world.GetComponent<CompBoundingBox>(entity);
 		cbb.position += offset;
 	}
+	// update
+	for (auto& entity : entities) {
+		UpdateLocalMat(world, entity);
+	}
 }
 
 void SysTransform::Translate(ecsx::World& world, const ecsx::Entity& entity, const sm::vec2& offset)
@@ -49,6 +53,8 @@ void SysTransform::Translate(ecsx::World& world, const ecsx::Entity& entity, con
 	// bb
 	auto& cbb = world.GetComponent<CompBoundingBox>(entity);
 	cbb.position += offset;
+	// update
+	UpdateLocalMat(world, entity);
 }
 
 void SysTransform::Rotate(ecsx::World& world, const ecsx::Entity& entity, float rot)
@@ -66,6 +72,8 @@ void SysTransform::Rotate(ecsx::World& world, const ecsx::Entity& entity, float 
 	// bb
 	auto& cbb = world.GetComponent<CompBoundingBox>(entity);
 	cbb.angle += rot;
+	// update
+	UpdateLocalMat(world, entity);
 }
 
 void SysTransform::SetPosition(ecsx::World& world, 
@@ -78,6 +86,8 @@ void SysTransform::SetPosition(ecsx::World& world,
 	} else {
 		world.AddComponent<CompPosition>(entity, pos);
 	}
+	// update
+	UpdateLocalMat(world, entity);
 }
 
 void SysTransform::SetAngle(ecsx::World& world, 
@@ -90,6 +100,8 @@ void SysTransform::SetAngle(ecsx::World& world,
 	} else {
 		world.AddComponent<CompAngle>(entity, angle);
 	}
+	// update
+	UpdateLocalMat(world, entity);
 }
 
 void SysTransform::SetScale(ecsx::World& world, 
@@ -102,6 +114,8 @@ void SysTransform::SetScale(ecsx::World& world,
 	} else {
 		world.AddComponent<CompScale>(entity, scale);
 	}
+	// update
+	UpdateLocalMat(world, entity);
 }
 
 void SysTransform::SetShear(ecsx::World& world, 
@@ -114,6 +128,8 @@ void SysTransform::SetShear(ecsx::World& world,
 	} else {
 		world.AddComponent<CompShear>(entity, shear);
 	}
+	// update
+	UpdateLocalMat(world, entity);
 }
 
 void SysTransform::SetOffset(ecsx::World& world, 
@@ -126,6 +142,8 @@ void SysTransform::SetOffset(ecsx::World& world,
 	} else {
 		world.AddComponent<CompOffset>(entity, offset);
 	}
+	// update
+	UpdateLocalMat(world, entity);
 }
 
 sm::vec2 SysTransform::CalcCenter(const ecsx::World& world, 
@@ -147,14 +165,14 @@ sm::vec2 SysTransform::CalcCenter(const ecsx::World& world,
 }
 
 void SysTransform::UpdateLocalMat(const ecsx::World& world,
-	                            const ecsx::Entity& entity)
+	                              const ecsx::Entity& entity)
 {
 	sm::vec2 center = CalcCenter(world, entity);
 	float angle = 0;
 	if (world.HasComponent<CompAngle>(entity)) {
 		angle = world.GetComponent<CompAngle>(entity).angle;
 	}
-	sm::vec2 scale;
+	sm::vec2 scale(1, 1);
 	if (world.HasComponent<CompScale>(entity)) {
 		scale = world.GetComponent<CompScale>(entity).scale;
 	}
