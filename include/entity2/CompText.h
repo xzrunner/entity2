@@ -1,12 +1,12 @@
 #pragma once
 
-#include <ecsx/Component.h>
+#include <entity0/Component.h>
 #include <painting2/Text.h>
 
 namespace e2
 {
 
-struct CompText : public ecsx::Component
+struct CompText : public e0::Component
 {
 	pt2::Text text;
 }; // CompText

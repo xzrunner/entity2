@@ -1,14 +1,14 @@
 #pragma once
 
-#include <ecsx/Component.h>
-#include <ecsx/Entity.h>
+#include <entity0/Component.h>
+#include <entity0/Entity.h>
 
 namespace e2
 {
 
-struct CompMask : public ecsx::Component
+struct CompMask : public e0::Component
 {
-	ecsx::Entity base, mask;
+	e0::Entity base, mask;
 
 }; // CompMask
 

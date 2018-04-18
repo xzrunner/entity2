@@ -1,14 +1,14 @@
 #pragma once
 
 #include <cu/cu_stl.h>
-#include <ecsx/Component.h>
+#include <entity0/Component.h>
 #include <SM_Rect.h>
 #include <SM_Vector.h>
 
 namespace e2
 {
 
-struct CompBoundingBox : public ecsx::Component
+struct CompBoundingBox : public e0::Component
 {
 	CompBoundingBox() : angle(0) {}
 	CompBoundingBox(const sm::rect& rect) : angle(0), rect(rect) {}

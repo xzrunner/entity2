@@ -2,7 +2,7 @@
 
 #include <SM_Rect.h>
 
-namespace ecsx { struct Entity; class World; }
+namespace e0 { struct Entity; class World; }
 
 namespace e2
 {
@@ -10,8 +10,8 @@ namespace e2
 class SysBoundingBox
 {
 public:
-	static void Combine(sm::rect& aabb, const ecsx::World& world, 
-		const ecsx::Entity& entity);
+	static void Combine(sm::rect& aabb, const e0::World& world, 
+		const e0::Entity& entity);
 
 }; // SysBoundingBox
 

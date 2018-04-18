@@ -1,17 +1,17 @@
 #pragma once
 
-#include <ecsx/Component.h>
-#include <ecsx/Entity.h>
+#include <entity0/Component.h>
+#include <entity0/Entity.h>
 
 #include <vector>
 
 namespace e2
 {
 
-struct CompComplex : public ecsx::Component
+struct CompComplex : public e0::Component
 {
-	std::shared_ptr<std::vector<ecsx::Entity>> children = 
-		std::make_unique<std::vector<ecsx::Entity>>();
+	std::shared_ptr<std::vector<e0::Entity>> children = 
+		std::make_unique<std::vector<e0::Entity>>();
 
 }; // CompComplex
 

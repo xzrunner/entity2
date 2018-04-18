@@ -3,16 +3,16 @@
 #include "entity2/CompImage.h"
 #include "entity2/CompComplex.h"
 
-#include <ecsx/World.h>
-#include <ecsx/Entity.h>
+#include <entity0/World.h>
+#include <entity0/Entity.h>
 #include <painting2/Texture.h>
 #include <painting2/RenderSystem.h>
 
 namespace e2
 {
 
-pt2::RenderReturn SysRender::Draw(const ecsx::World& world,
-                                  const ecsx::Entity& entity,
+pt2::RenderReturn SysRender::Draw(const e0::World& world,
+                                  const e0::Entity& entity,
 	                              const RenderParams& rp)
 {
 	if (entity.IsNull()) {

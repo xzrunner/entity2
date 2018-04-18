@@ -1,12 +1,12 @@
 #pragma once
 
-#include <ecsx/Component.h>
+#include <entity0/Component.h>
 #include <moon/SceneNodeScript.h>
 
 namespace e2
 {
 
-struct CompScript : public ecsx::Component
+struct CompScript : public e0::Component
 {
 	moon::SceneNodeScript script;
 

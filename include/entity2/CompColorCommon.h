@@ -1,12 +1,12 @@
 #pragma once
 
-#include <ecsx/Component.h>
+#include <entity0/Component.h>
 #include <painting2/RenderColorCommon.h>
 
 namespace e2
 {
 
-struct CompColorCommon : public ecsx::Component
+struct CompColorCommon : public e0::Component
 {
 	pt2::RenderColorCommon col;
 

@@ -3,7 +3,7 @@
 #include <painting2/RenderReturn.h>
 #include <SM_Matrix2D.h>
 
-namespace ecsx { class World; struct Entity; }
+namespace e0 { class World; struct Entity; }
 
 namespace e2
 {
@@ -18,8 +18,8 @@ public:
 class SysRender
 {
 public:
-	static pt2::RenderReturn Draw(const ecsx::World& world,
-		const ecsx::Entity& entity, const RenderParams& rp = RenderParams());
+	static pt2::RenderReturn Draw(const e0::World& world,
+		const e0::Entity& entity, const RenderParams& rp = RenderParams());
 
 }; // SysRender
 

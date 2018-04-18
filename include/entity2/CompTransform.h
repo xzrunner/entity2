@@ -1,13 +1,13 @@
 #pragma once
 
-#include <ecsx/Component.h>
+#include <entity0/Component.h>
 #include <SM_Vector.h>
 #include <SM_Matrix2D.h>
 
 namespace e2
 {
 
-struct CompPosition : public ecsx::Component
+struct CompPosition : public e0::Component
 {
 	CompPosition() {}
 	CompPosition(const sm::vec2& pos) : pos(pos) {}
@@ -16,7 +16,7 @@ struct CompPosition : public ecsx::Component
 
 }; // CompPosition
 
-struct CompAngle : public ecsx::Component
+struct CompAngle : public e0::Component
 {
 	CompAngle() : angle(0) {}
 	CompAngle(float angle) : angle(angle) {}
@@ -25,7 +25,7 @@ struct CompAngle : public ecsx::Component
 
 }; // CompAngle
 
-struct CompScale : public ecsx::Component
+struct CompScale : public e0::Component
 {
 	CompScale() : scale(1, 1) {}
 	CompScale(const sm::vec2& scale) : scale(scale) {}
@@ -34,7 +34,7 @@ struct CompScale : public ecsx::Component
 
 }; // CompScale
 
-struct CompShear : public ecsx::Component
+struct CompShear : public e0::Component
 {
 	CompShear() {}
 	CompShear(const sm::vec2& shear) : shear(shear) {}
@@ -43,7 +43,7 @@ struct CompShear : public ecsx::Component
 
 }; // CompShear
 
-struct CompOffset : public ecsx::Component
+struct CompOffset : public e0::Component
 {
 	CompOffset() {}
 	CompOffset(const sm::vec2& offset) : offset(offset) {}
@@ -52,7 +52,7 @@ struct CompOffset : public ecsx::Component
 
 }; // CompOffset
 
-struct CompLocalMat : public ecsx::Component
+struct CompLocalMat : public e0::Component
 {
 	sm::Matrix2D mat;
 

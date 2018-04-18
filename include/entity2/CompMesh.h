@@ -1,15 +1,15 @@
 #pragma once
 
-#include <ecsx/Component.h>
-#include <ecsx/Entity.h>
+#include <entity0/Component.h>
+#include <entity0/Entity.h>
 #include <painting2/Mesh.h>
 
 namespace e2
 {
 
-struct CompMesh : public ecsx::Component
+struct CompMesh : public e0::Component
 {
-	std::unique_ptr<pt2::Mesh<ecsx::Entity>> mesh = nullptr;
+	std::unique_ptr<pt2::Mesh<e0::Entity>> mesh = nullptr;
 
 }; // CompMesh
 

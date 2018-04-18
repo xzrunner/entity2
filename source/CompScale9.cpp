@@ -8,21 +8,21 @@
 namespace e2
 {
 
-void CompScale9::SetWidth(ecsx::World& world, float _width)
+void CompScale9::SetWidth(e0::World& world, float _width)
 {
 	if (width != _width) {
 		SetSize(world, _width, height);
 	}
 }
 
-void CompScale9::SetHeight(ecsx::World& world, float _height)
+void CompScale9::SetHeight(e0::World& world, float _height)
 {
 	if (height != _height) {
 		SetSize(world, width, _height);
 	}
 }
 
-void CompScale9::SetSize(ecsx::World& world, float width, float height)
+void CompScale9::SetSize(e0::World& world, float width, float height)
 {
 	if (width == width && height == height) {
 		return;
@@ -120,7 +120,7 @@ void CompScale9::SetSize(ecsx::World& world, float width, float height)
 	}
 }
 
-void CompScale9::ResizeNode(ecsx::World& world, Scale9Idx idx, const sm::vec2& center, float dst_w,
+void CompScale9::ResizeNode(e0::World& world, Scale9Idx idx, const sm::vec2& center, float dst_w,
 	                        float dst_h, bool no_scale_w, bool no_scale_h)
 {
 	if (idx < 0 || idx >= 9 || grids[idx].IsNull()) {
@@ -243,7 +243,7 @@ void CompScale9::ResizeNode(ecsx::World& world, Scale9Idx idx, const sm::vec2& c
 	SysTransform::SetPosition(world, grid, pos + sm::rotate_vector(offset, angle) - offset);
 }
 
-sm::vec2 CompScale9::GetChildSize(const ecsx::World& world, Scale9Idx idx) const
+sm::vec2 CompScale9::GetChildSize(const e0::World& world, Scale9Idx idx) const
 {
 	if (idx < 0 || idx >= 9 || grids[idx].IsNull()) {
 		return sm::vec2(0, 0);
@@ -253,25 +253,25 @@ sm::vec2 CompScale9::GetChildSize(const ecsx::World& world, Scale9Idx idx) const
 	return sm::vec2(cbb.rect.Width(), cbb.rect.Height());
 }
 
-float CompScale9::GetLeftWidth(const ecsx::World& world) const
+float CompScale9::GetLeftWidth(const e0::World& world) const
 {
 	return sz_left == 0 ?
 		std::max(std::max(GetChildSize(world, S9_DOWN_LEFT).x, GetChildSize(world, S9_MID_LEFT).x), GetChildSize(world, S9_TOP_LEFT).x) : sz_left;
 }
 
-float CompScale9::GetRightWidth(const ecsx::World& world) const
+float CompScale9::GetRightWidth(const e0::World& world) const
 {
 	return sz_right == 0 ?
 		std::max(std::max(GetChildSize(world, S9_DOWN_RIGHT).x, GetChildSize(world, S9_MID_RIGHT).x), GetChildSize(world, S9_TOP_RIGHT).x) : sz_right;
 }
 
-float CompScale9::GetDownHeight(const ecsx::World& world) const
+float CompScale9::GetDownHeight(const e0::World& world) const
 {
 	return sz_down == 0 ?
 		std::max(std::max(GetChildSize(world, S9_DOWN_LEFT).y, GetChildSize(world, S9_DOWN_CENTER).y), GetChildSize(world, S9_DOWN_RIGHT).y) : sz_down;
 }
 
-float CompScale9::GetTopHeight(const ecsx::World& world) const
+float CompScale9::GetTopHeight(const e0::World& world) const
 {
 	return sz_top == 0 ?
 		std::max(std::max(GetChildSize(world, S9_TOP_LEFT).y, GetChildSize(world, S9_TOP_CENTER).y), GetChildSize(world, S9_TOP_RIGHT).y) : sz_top;

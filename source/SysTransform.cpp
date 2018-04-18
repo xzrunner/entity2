@@ -6,8 +6,8 @@
 namespace e2
 {
 
-void SysTransform::Translate(ecsx::World& world,
-	                         const std::vector<ecsx::Entity>& entities,
+void SysTransform::Translate(e0::World& world,
+	                         const std::vector<e0::Entity>& entities,
 	                         const sm::vec2& offset)
 {
 	// pos
@@ -38,7 +38,7 @@ void SysTransform::Translate(ecsx::World& world,
 	}
 }
 
-void SysTransform::Translate(ecsx::World& world, const ecsx::Entity& entity, const sm::vec2& offset)
+void SysTransform::Translate(e0::World& world, const e0::Entity& entity, const sm::vec2& offset)
 {
 	// pos
 	if (world.HasComponent<CompPosition>(entity)) {
@@ -57,7 +57,7 @@ void SysTransform::Translate(ecsx::World& world, const ecsx::Entity& entity, con
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::Rotate(ecsx::World& world, const ecsx::Entity& entity, float rot)
+void SysTransform::Rotate(e0::World& world, const e0::Entity& entity, float rot)
 {
 	// angle
 	if (world.HasComponent<CompAngle>(entity)) {
@@ -76,8 +76,8 @@ void SysTransform::Rotate(ecsx::World& world, const ecsx::Entity& entity, float 
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::SetPosition(ecsx::World& world, 
-	                           const ecsx::Entity& entity, 
+void SysTransform::SetPosition(e0::World& world, 
+	                           const e0::Entity& entity, 
 	                           const sm::vec2& pos)
 {
 	if (world.HasComponent<CompPosition>(entity)) {
@@ -90,8 +90,8 @@ void SysTransform::SetPosition(ecsx::World& world,
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::SetAngle(ecsx::World& world, 
-	                        const ecsx::Entity& entity, 
+void SysTransform::SetAngle(e0::World& world, 
+	                        const e0::Entity& entity, 
 	                        float angle)
 {
 	if (world.HasComponent<CompAngle>(entity)) {
@@ -104,8 +104,8 @@ void SysTransform::SetAngle(ecsx::World& world,
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::SetScale(ecsx::World& world, 
-	                        const ecsx::Entity& entity, 
+void SysTransform::SetScale(e0::World& world, 
+	                        const e0::Entity& entity, 
 	                        const sm::vec2& scale)
 {
 	if (world.HasComponent<CompScale>(entity)) {
@@ -118,8 +118,8 @@ void SysTransform::SetScale(ecsx::World& world,
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::SetShear(ecsx::World& world, 
-	                        const ecsx::Entity& entity,
+void SysTransform::SetShear(e0::World& world, 
+	                        const e0::Entity& entity,
 	                        const sm::vec2& shear)
 {
 	if (world.HasComponent<CompShear>(entity)) {
@@ -132,8 +132,8 @@ void SysTransform::SetShear(ecsx::World& world,
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::SetOffset(ecsx::World& world, 
-	                         const ecsx::Entity& entity, 
+void SysTransform::SetOffset(e0::World& world, 
+	                         const e0::Entity& entity, 
 	                         const sm::vec2& offset)
 {
 	if (world.HasComponent<CompOffset>(entity)) {
@@ -146,8 +146,8 @@ void SysTransform::SetOffset(ecsx::World& world,
 	UpdateLocalMat(world, entity);
 }
 
-sm::vec2 SysTransform::CalcCenter(const ecsx::World& world, 
-	                              const ecsx::Entity& entity)
+sm::vec2 SysTransform::CalcCenter(const e0::World& world, 
+	                              const e0::Entity& entity)
 {
 	sm::vec2 pos;
 	if (world.HasComponent<CompPosition>(entity)) {
@@ -164,8 +164,8 @@ sm::vec2 SysTransform::CalcCenter(const ecsx::World& world,
 	return pos + sm::rotate_vector(-offset, angle) + offset;
 }
 
-void SysTransform::UpdateLocalMat(const ecsx::World& world,
-	                              const ecsx::Entity& entity)
+void SysTransform::UpdateLocalMat(const e0::World& world,
+	                              const e0::Entity& entity)
 {
 	sm::vec2 center = CalcCenter(world, entity);
 	float angle = 0;
