@@ -7,7 +7,7 @@
 namespace e2
 {
 
-void SysBoundingBox::Combine(sm::rect& aabb, const e0::World& world, 
+void SysBoundingBox::Combine(sm::rect& aabb, const e0::World& world,
 	                         const e0::Entity& entity)
 {
 	auto& cbb = world.GetComponent<CompBoundingBox>(entity);

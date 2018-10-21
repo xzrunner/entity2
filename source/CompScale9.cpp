@@ -97,7 +97,7 @@ void CompScale9::SetSize(e0::World& world, float width, float height)
 		{
 			float w0 = GetLeftWidth(world),
 				  w2 = GetRightWidth(world),
-				  w1 = width - w0 - w2; 
+				  w1 = width - w0 - w2;
 
 			ResizeNode(world, S9_MID_LEFT, sm::vec2(-w0*0.5f-w1*0.5f, 0.0f), w0, height, true, true);
 			ResizeNode(world, S9_MID_CENTER, sm::vec2(0.0f, 0.0f), w1, height, false, true);
@@ -222,7 +222,7 @@ void CompScale9::ResizeNode(e0::World& world, Scale9Idx idx, const sm::vec2& cen
 	}
 
 	auto old_scale = SysTransform::GetScale(world, grid);
-	sm::vec2 new_scale;	
+	sm::vec2 new_scale;
 	if (rotate) {
 		new_scale.x = no_scale_h ? 1 : dst_h / src_w;
 		new_scale.y = no_scale_w ? 1 : dst_w / src_h;

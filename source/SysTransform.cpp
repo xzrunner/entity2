@@ -76,8 +76,8 @@ void SysTransform::Rotate(e0::World& world, const e0::Entity& entity, float rot)
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::SetPosition(e0::World& world, 
-	                           const e0::Entity& entity, 
+void SysTransform::SetPosition(e0::World& world,
+	                           const e0::Entity& entity,
 	                           const sm::vec2& pos)
 {
 	if (world.HasComponent<CompPosition>(entity)) {
@@ -90,8 +90,8 @@ void SysTransform::SetPosition(e0::World& world,
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::SetAngle(e0::World& world, 
-	                        const e0::Entity& entity, 
+void SysTransform::SetAngle(e0::World& world,
+	                        const e0::Entity& entity,
 	                        float angle)
 {
 	if (world.HasComponent<CompAngle>(entity)) {
@@ -104,8 +104,8 @@ void SysTransform::SetAngle(e0::World& world,
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::SetScale(e0::World& world, 
-	                        const e0::Entity& entity, 
+void SysTransform::SetScale(e0::World& world,
+	                        const e0::Entity& entity,
 	                        const sm::vec2& scale)
 {
 	if (world.HasComponent<CompScale>(entity)) {
@@ -118,7 +118,7 @@ void SysTransform::SetScale(e0::World& world,
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::SetShear(e0::World& world, 
+void SysTransform::SetShear(e0::World& world,
 	                        const e0::Entity& entity,
 	                        const sm::vec2& shear)
 {
@@ -132,8 +132,8 @@ void SysTransform::SetShear(e0::World& world,
 	UpdateLocalMat(world, entity);
 }
 
-void SysTransform::SetOffset(e0::World& world, 
-	                         const e0::Entity& entity, 
+void SysTransform::SetOffset(e0::World& world,
+	                         const e0::Entity& entity,
 	                         const sm::vec2& offset)
 {
 	if (world.HasComponent<CompOffset>(entity)) {
@@ -146,7 +146,7 @@ void SysTransform::SetOffset(e0::World& world,
 	UpdateLocalMat(world, entity);
 }
 
-sm::vec2 SysTransform::CalcCenter(const e0::World& world, 
+sm::vec2 SysTransform::CalcCenter(const e0::World& world,
 	                              const e0::Entity& entity)
 {
 	sm::vec2 pos;

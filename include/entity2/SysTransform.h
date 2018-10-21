@@ -12,7 +12,7 @@ namespace e2
 class SysTransform
 {
 public:
-	static void Translate(e0::World& world, 
+	static void Translate(e0::World& world,
 		const std::vector<e0::Entity>& entities,
 		const sm::vec2& offset);
 

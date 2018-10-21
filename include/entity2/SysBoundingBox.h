@@ -10,7 +10,7 @@ namespace e2
 class SysBoundingBox
 {
 public:
-	static void Combine(sm::rect& aabb, const e0::World& world, 
+	static void Combine(sm::rect& aabb, const e0::World& world,
 		const e0::Entity& entity);
 
 }; // SysBoundingBox
