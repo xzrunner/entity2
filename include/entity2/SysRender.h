@@ -4,6 +4,7 @@
 #include <SM_Matrix2D.h>
 
 namespace e0 { class World; struct Entity; }
+namespace ur2 { class Device; class Context; }
 
 namespace e2
 {
@@ -18,8 +19,8 @@ public:
 class SysRender
 {
 public:
-	static pt2::RenderReturn Draw(const e0::World& world,
-		const e0::Entity& entity, const RenderParams& rp = RenderParams());
+	static pt2::RenderReturn Draw(const ur2::Device& dev, ur2::Context& ctx,
+        const e0::World& world, const e0::Entity& entity, const RenderParams& rp = RenderParams());
 
 }; // SysRender
 

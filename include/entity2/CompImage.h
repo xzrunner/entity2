@@ -1,17 +1,16 @@
 #pragma once
 
 #include <entity0/Component.h>
+#include <unirender2/typedef.h>
 
 #include <memory>
-
-namespace pt2 { class Texture; }
 
 namespace e2
 {
 
 struct CompImage : public e0::Component
 {
-	std::shared_ptr<pt2::Texture> tex = nullptr;
+	ur2::TexturePtr tex = nullptr;
 
 }; // CompImage
 
