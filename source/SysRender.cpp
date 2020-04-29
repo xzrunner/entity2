@@ -5,16 +5,16 @@
 
 #include <entity0/World.h>
 #include <entity0/Entity.h>
-#include <unirender2/Texture.h>
-#include <unirender2/RenderState.h>
+#include <unirender/Texture.h>
+#include <unirender/RenderState.h>
 #include <painting2/Texture.h>
 #include <painting2/RenderSystem.h>
 
 namespace e2
 {
 
-pt2::RenderReturn SysRender::Draw(const ur2::Device& dev,
-                                  ur2::Context& ctx,
+pt2::RenderReturn SysRender::Draw(const ur::Device& dev,
+                                  ur::Context& ctx,
                                   const e0::World& world,
                                   const e0::Entity& entity,
 	                              const RenderParams& rp)
@@ -40,7 +40,7 @@ pt2::RenderReturn SysRender::Draw(const ur2::Device& dev,
 		{
             float w = static_cast<float>(tex->GetWidth());
             float h = static_cast<float>(tex->GetHeight());
-            ur2::RenderState rs;
+            ur::RenderState rs;
 			pt2::RenderSystem::DrawTexture(dev, ctx, rs, tex, sm::rect(w, h), rp_child.mat);
 		}
 	}
